@@ -33,6 +33,12 @@ defmodule Dice.Mixfile do
     ]
   end
 
+  defp description do
+    """
+    A basic dice rolling package.
+    """
+  end
+
   defp package do
     [
       name: :dice,
