@@ -29,7 +29,17 @@ defmodule Dice.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:ex_doc, "~> 0.12"}
+      {:ex_doc, "~> 0.12", only: :dev}
+    ]
+  end
+
+  defp package do
+    [
+      name: :dice,
+      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["Matthew Secrist"],
+      licenses: ["WTFPL"],
+      links: %{"GitHub" => "https://github.com/matthewsecrist/Dice"}
     ]
   end
 end
