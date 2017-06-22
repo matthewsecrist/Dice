@@ -8,7 +8,7 @@
     <title>Dice – dice v0.1.0</title>
     <link rel="stylesheet" href="dist/app-4ecae1abb8.css" />
     
-    <script src="dist/sidebar_items-80eaac5998.js"></script>
+    <script src="dist/sidebar_items-44462bf395.js"></script>
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -64,6 +64,11 @@
         <small class="visible-xs">dice v0.1.0</small>
         Dice
         
+          <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L1" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+        
       </h1>
 
       
@@ -91,11 +96,23 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#avg/1">avg(str)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#avg/2">avg(n, sides)</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns the average roll of a <code class="inline">d</code>-sided dice rolled <code class="inline">n</code> times</p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#max/1">max(str)</a>
+  </div>
   
 </div>
 <div class="summary-row">
@@ -109,6 +126,12 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#min/1">min(str)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#min/2">min(n, sides)</a>
   </div>
   
@@ -118,11 +141,23 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#roll/1">roll(str)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#roll/2">roll(n, sides)</a>
   </div>
   
     <div class="summary-synopsis"><p>Gets a list of a <code class="inline">d</code>-sided dice rolled <code class="inline">n</code> times</p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sum/1">sum(str)</a>
+  </div>
   
 </div>
 <div class="summary-row">
@@ -154,7 +189,28 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="avg/2">
+          <div class="detail" id="avg/1">
+  
+  <div class="detail-header">
+    <a href="#avg/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">avg(str)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L106" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="avg/2">
   
   <div class="detail-header">
     <a href="#avg/2" class="detail-link" title="Link to this function">
@@ -162,6 +218,11 @@
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">avg(n, sides)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L101" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
     
     
     
@@ -174,8 +235,32 @@
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Dice.avg(10, 1000)
+560
+
+iex&gt; Dice.avg(&quot;10d10&quot;)
 560</code></pre>
 
+  </section>
+</div>
+<div class="detail" id="max/1">
+  
+  <div class="detail-header">
+    <a href="#max/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">max(str)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L66" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="max/2">
@@ -186,6 +271,11 @@
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">max(n, sides)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L61" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
     
     
     
@@ -198,8 +288,32 @@
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Dice.max(10, 1000)
+914
+
+iex&gt; Dice.max(&quot;10d10&quot;)
 914</code></pre>
 
+  </section>
+</div>
+<div class="detail" id="min/1">
+  
+  <div class="detail-header">
+    <a href="#min/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">min(str)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L86" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="min/2">
@@ -210,6 +324,11 @@
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">min(n, sides)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L81" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
     
     
     
@@ -222,8 +341,32 @@
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Dice.min(10, 1000)
+49
+
+iex&gt; Dice.min(&quot;10d10&quot;)
 49</code></pre>
 
+  </section>
+</div>
+<div class="detail" id="roll/1">
+  
+  <div class="detail-header">
+    <a href="#roll/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">roll(str)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L26" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="roll/2">
@@ -235,21 +378,51 @@
     </a>
     <span class="signature">roll(n, sides)</span>
     
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L21" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
     
     
   </div>
   <section class="docstring">
     <p>Gets a list of a <code class="inline">d</code>-sided dice rolled <code class="inline">n</code> times.</p>
 <p>Usage: <code class="inline">Dice.roll(n, d)</code></p>
-<p>Used to roll a <code class="inline">d</code>-sided dice <code class="inline">n</code> times, returning a list of the rolls.</p>
+<p>Used to roll a <code class="inline">d</code>-sided dice <code class="inline">n</code> times, returning a list of the rolls.
+Supports either two numbers or one string.</p>
 <h2 id="roll/2-examples" class="section-heading">
   <a href="#roll/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Dice.roll(10, 10)
+[6, 10, 3, 6, 7, 1, 2, 9, 2, 4]
+
+iex&gt; Dice.roll(&quot;10d10&quot;)
 [6, 10, 3, 6, 7, 1, 2, 9, 2, 4]</code></pre>
 
+  </section>
+</div>
+<div class="detail" id="sum/1">
+  
+  <div class="detail-header">
+    <a href="#sum/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sum(str)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L46" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="sum/2">
@@ -260,6 +433,11 @@
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">sum(n, sides)</span>
+    
+      <a href="https://github.com/matthewsecrist/Dice/blob/master/lib/dice.ex#L41" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
     
     
     
@@ -272,6 +450,9 @@
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Dice.sum(10, 10)
+52
+
+iex&gt; Dice.sum(&quot;10d10&quot;)
 52</code></pre>
 
   </section>

@@ -3,11 +3,14 @@ defmodule Dice.Mixfile do
 
   def project do
     [app: :dice,
-     version: "0.1.0",
+     version: "0.2.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     package: package(),
+     description: description(),
+     source_url: "https://github.com/matthewsecrist/Dice"]
   end
 
   # Configuration for the OTP application
@@ -41,8 +44,8 @@ defmodule Dice.Mixfile do
 
   defp package do
     [
-      name: :dice,
-      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      name: :ex_dice,
+      files: ["lib", "mix.exs", "README*"],
       maintainers: ["Matthew Secrist"],
       licenses: ["WTFPL"],
       links: %{"GitHub" => "https://github.com/matthewsecrist/Dice"}
