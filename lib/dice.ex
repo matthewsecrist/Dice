@@ -18,7 +18,7 @@ defmodule Dice do
       iex> Dice.roll("10d10")
       [6, 10, 3, 6, 7, 1, 2, 9, 2, 4]
   """
-  def roll(n, sides) when n > 1 and is_integer(n) and sides > 1 and is_integer(sides) do
+  def roll(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     Enum.to_list(1..n)
     |> Enum.map(fn x -> div(Enum.random(1..sides) * x, x)  end)
   end
@@ -26,6 +26,13 @@ defmodule Dice do
   def roll(str) when is_bitstring(str) do
     [n, sides] = parse_string(str)
     roll(n, sides)
+  end
+
+  @doc """
+  Provide roll one argument of an integer to get one die roll.
+  """
+  def roll(sides) when is_integer(sides) do
+    Enum.random(1..sides)
   end
 
   @doc """
@@ -38,7 +45,7 @@ defmodule Dice do
       iex> Dice.sum("10d10")
       52
   """
-  def sum(n, sides) when n > 1 and is_integer(n) and sides > 1 and is_integer(sides) do
+  def sum(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     roll(n, sides)
     |> Enum.sum
   end
@@ -58,7 +65,7 @@ defmodule Dice do
       iex> Dice.max("10d10")
       914
   """
-  def max(n, sides) when n > 1 and is_integer(n) and sides > 1 and is_integer(sides) do
+  def max(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     roll(n, sides)
     |> Enum.max
   end
@@ -78,7 +85,7 @@ defmodule Dice do
       iex> Dice.min("10d10")
       49
   """
-  def min(n, sides) when n > 1 and is_integer(n) and sides > 1 and is_integer(sides) do
+  def min(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     roll(n, sides)
     |> Enum.min
   end
@@ -94,11 +101,11 @@ defmodule Dice do
   ## Examples
       iex> Dice.avg(10, 1000)
       560
-      
+
       iex> Dice.avg("10d10")
       560
   """
-  def avg(n, sides) when n > 1 and is_integer(n) and sides > 1 and is_integer(sides) do
+  def avg(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     sum(n,sides)
     |> div(n)
   end
