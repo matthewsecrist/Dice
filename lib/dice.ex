@@ -24,16 +24,14 @@ defmodule Dice do
   end
 
   @doc """
-  Roll using a string.
+  Roll/1 is either implemented by passing in a string such as "10d10" or one integer for 1 dice rolled of `n` sides.
+  Docs can't seperate them so they both show up here.
   """
   def roll(str) when is_bitstring(str) do
     [n, sides] = parse_string(str)
     roll(n, sides)
   end
 
-  @doc """
-  Provide roll one argument of an integer to get one die roll.
-  """
   def roll(sides) when is_integer(sides) do
     :rand.uniform(sides)
   end
