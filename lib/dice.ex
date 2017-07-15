@@ -20,9 +20,12 @@ defmodule Dice do
   """
   def roll(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     Enum.to_list(1..n)
-    |> Enum.map(fn _x -> Enum.random(1..sides) end)
+    |> Enum.map(fn _x -> :rand.uniform(n)  end)
   end
 
+  @doc """
+  Roll using a string.
+  """
   def roll(str) when is_bitstring(str) do
     [n, sides] = parse_string(str)
     roll(n, sides)
@@ -32,7 +35,7 @@ defmodule Dice do
   Provide roll one argument of an integer to get one die roll.
   """
   def roll(sides) when is_integer(sides) do
-    Enum.random(1..sides)
+    :rand.uniform(sides)
   end
 
   @doc """
