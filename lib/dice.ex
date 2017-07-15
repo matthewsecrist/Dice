@@ -20,7 +20,7 @@ defmodule Dice do
   """
   def roll(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     Enum.to_list(1..n)
-    |> Enum.map(fn x -> div(Enum.random(1..sides) * x, x)  end)
+    |> Enum.map(fn _x -> Enum.random(1..sides) end)
   end
 
   def roll(str) when is_bitstring(str) do
