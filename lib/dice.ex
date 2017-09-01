@@ -20,7 +20,7 @@ defmodule Dice do
   """
   def roll(n, sides) when n > 0 and is_integer(n) and sides > 1 and is_integer(sides) do
     Enum.to_list(1..n)
-    |> Enum.map(fn _x -> :rand.uniform(n)  end)
+    |> Enum.map(fn _x -> :rand.uniform(sides) end)
   end
 
   @doc """
